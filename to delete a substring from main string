@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void del_sub_from_main(char *str,char *old){
+    int main_len=strlen(str);
+    int sub_len=strlen(sub);
+    int i=0;
+    while (i<main_len){
+        if (strstr(&str[i],sub)==&str[i]){
+            main_len=main_len-sub_len;
+            for (int j=i;j<main_len;j++){
+                str[j]=str[j+sub_len];
+            }
+        }
+        else {
+            i++;
+        }
+    }
+}
