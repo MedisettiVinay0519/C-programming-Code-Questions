@@ -1,3 +1,15 @@
+Acess the Matrix Operations:
+void print_matrix(int *a[m][n]){
+    for (int i=0;i<m;i++){
+        for (int j=0;j<n;j++){
+            printf("%d",a[i][j]);
+            }
+    }
+}
+
+
+
+
 Matrix addition 
 #include<stdio.h>
 #include<stdlib.h>
