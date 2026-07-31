@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+void remove_vowels(char *string){
+    int str_len=strlen(string);
+    int j=0;
+    for (int i=0;i<str_len;i++){
+        if (!(string[i]=='a'|| string[i]=='e'||string[i]=='i'||string[i]=='o'||string[i]=='u')){
+            string[j]=string[i];
+            j=j+1;
+        }
+    }
+}
