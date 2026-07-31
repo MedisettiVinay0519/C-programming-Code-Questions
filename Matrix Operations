@@ -2,6 +2,7 @@ Matrix addition
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<math.h>
 void matrix_add(int *a[m][n],int *b[k][p],int *res[m][n]){
     if (m==k && n==p){
         int res[m][n];
@@ -44,4 +45,15 @@ int matrix_trace(int *a[m][m]){
         res+=a[i][i];
     }
     return res;
+}
+Matrix Norm Function
+int matrix_norm(int *a[m][n]){
+    int res=0;
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            res=res+(a[i][j]*a[i][j]);
+    }
+}
+res=sqrt(res);
+return res;
 }
