@@ -1,0 +1,19 @@
+void freq_count(char str[]){
+    /*Using ASCII Values Concept*/
+    /*Frequency array initialization*/
+    int freq_arr[26]={0};
+    len=sizeof(arr)/sizeof(arr[0])
+    for (int i=0;i<len;i++){
+        freq_arr[str[i]-'a']++
+    }
+    /*Printing the Frequency Count*/
+    for (int i=0;i<len;i++){
+        printf("%c freq :%d",str[i],freq_arr[str[i]-'a']);
+    }
+}
+int main(){
+    /*String Initization*/
+    int str[];
+    freq_count(arr);
+    return 0;
+}
