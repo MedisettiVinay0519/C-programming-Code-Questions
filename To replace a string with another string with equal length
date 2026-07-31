@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+void replace_equal_length(char *string,char *old_str,char *new_str){
+    int substr_len=strlen(old_str);
+    int str_len=strlen(string);
+    char *match=strstr(string,old_str);
+    while(match!=NULL){
+        strncpy(string,new_str,substr_len);
+        match=strstr(match+substr_len,old_str);
+    }
+}
