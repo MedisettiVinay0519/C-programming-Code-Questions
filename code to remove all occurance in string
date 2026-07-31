@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+void remove_char(char *string,char ch){
+    int j=0;
+    for (int i=0;i<strlen(string);i++){
+        if(string[i]!=ch){
+            string[j]=string[i];
+            j=j+1;
+        }
+    }
+    string[j]='\0';
+}
+int main(){
+    char str[]="banana";
+    char ch='a';
+    remove_char(str,ch);
+    printf("%s",str);
+}
