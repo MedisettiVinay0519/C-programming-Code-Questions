@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int word_count(char *string,char *word){
+    int word_len=strlen(word);
+    int string_len=strlen(string);
+    char *match=strstr(string,word);
+    int cnt=0;
+    
+    while(match!=NULL)
+    {
+        cnt=cnt+1;
+        match=strstr(match+word_len,word);
+    }
+    return cnt;
+    }
+
+int main(){
+    char str[]="Hi Hi Hi Hi";
+    char word[]="Hi";
+    int cnt=word_count(str,word);
+    printf("%d",cnt);
+    return 0;
+}
