@@ -57,7 +57,7 @@ int matrix_norm(int *a[m][n]){
 res=sqrt(res);
 return res;
 }
-int find_max_each_row(int *a[m][n]){
+void find_max_each_row(int *a[m][n]){
     for (int i=0;i<m;i++){
         int max=a[i][0];
         for (int j=0;j<n;j++){
@@ -66,6 +66,17 @@ int find_max_each_row(int *a[m][n]){
             }
         
         printf(" max element in %d row is %d",i,max);
+        }
+    }
+}
+void find_max_each_col(int *a[m][n]){
+    for (int j=0;j<n;j++){
+        int max=a[0][j];
+        for (int i=0;i<m;i++){
+            if max<a[i][j]{
+                max=a[i][j];
+            }
+            
         }
     }
 }
