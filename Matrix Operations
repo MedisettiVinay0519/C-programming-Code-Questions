@@ -29,3 +29,11 @@ void matrix_mul(int *a[m][n],int *b[n][p],int *res[m][p]){
     }
     
 }
+Matrix Transpose:
+void matrix_transpose(int *a[m][n],int *res[m][n]){
+    for (int i=0;i<m;i++){
+        for (int j=0;j<n;j++){
+            res[j][i]=a[i][j];
+        }
+    }
+}
