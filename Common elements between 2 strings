@@ -1,0 +1,17 @@
+// Online C compiler to run C program online
+#include<stdio.h>
+#include<string.h>
+void find_comman_elements(char str1,int len1,char str2,int len2){
+    /*Using The Concept of Hash maps*/
+    int freq_hash[256]={0};
+    for (int i=0;i<len1;i++){
+        freq_hash[str1[i]]=1
+    }
+    comman_str=' ';
+    for (int j=0;j<len2;j++){
+        if (freq_hash[str2[i]]){
+            strcat(comman_str,str2[i]);
+        }
+    }
+    printf("%s",comman_str);
+}
