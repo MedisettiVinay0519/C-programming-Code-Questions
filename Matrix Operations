@@ -37,3 +37,11 @@ void matrix_transpose(int *a[m][n],int *res[m][n]){
         }
     }
 }
+Matrix Trace:
+int matrix_trace(int *a[m][m]){
+    int res=0;
+    for (int i=0;i<m;i++){
+        res+=a[i][i];
+    }
+    return res;
+}
