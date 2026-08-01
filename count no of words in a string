@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int count_words(const char *str) {
+    int word_count = 0;
+    bool in_word = false;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        // Check for whitespace characters
+        if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n') {
+            in_word = false;
+        } 
+        // If not whitespace and not currently inside a word
+        else if (!in_word) {
+            in_word = true;
+            word_count++;
+        }
+    }
+    return word_count;
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter a string: ");
+    // Read an entire line including spaces
+    fgets(str, sizeof(str), stdin);
+
+    int words = count_words(str);
+    printf("Total number of words: %d\n", words);
+
+    return 0;
+}
