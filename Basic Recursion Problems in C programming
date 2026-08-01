@@ -45,3 +45,22 @@ int main() {
 
     return 0;
 }
+Generating the sum of the digits of number:
+#include<stdio.h>
+int sum_digits(int n){
+    static int sum;
+    if (n==0){
+        return sum;
+    }
+    else{
+        sum=sum+n%10;
+        n=n/10;
+        return sum_digits(n);
+    }
+}
+int main(){
+    int k=1010;
+    int sum;
+    sum=sum_digits(k);
+    printf("%d",sum);
+}
