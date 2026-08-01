@@ -64,3 +64,20 @@ int main(){
     sum=sum_digits(k);
     printf("%d",sum);
 }
+Recursive approach to reverse a string:
+#include<stdio.h>
+#include<string.h>
+void reversestr(char s[],int l,int r){
+    if(l<r){
+        char temp=s[l];
+        s[l]=s[r];
+        s[r]=temp;
+        reversestr(s,l+1,r-1);
+    }
+}
+int main(){
+    char s[]="Hello World";
+    int n=strlen(s);
+    reversestr(s,0,n-1);
+    printf("%s",s);
+}
