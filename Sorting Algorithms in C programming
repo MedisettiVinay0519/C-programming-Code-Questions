@@ -33,3 +33,6 @@ for(int i=0;i<size-1;i++){
     arr[ind]=temp;
 }
   
+insertion sort:
+merge sort:
+quick sort:
