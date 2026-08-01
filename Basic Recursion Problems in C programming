@@ -1,4 +1,4 @@
-Generate Fibnonacii Series of n intergers
+Generate Fibnonacii Series of n intergers :
 // Online C compiler to run C program online
 #include <stdio.h>
 int fib_num(int n){
@@ -17,6 +17,30 @@ int main() {
         arr[i]=fib_num(i);
         printf("%d",arr[i]);
         /*or use printf("%d",fib_num(i));*/
+    }
+
+    return 0;
+}
+
+Generate a factorial of a number n :
+// Online C compiler to run C program online
+#include <stdio.h>
+int fact_num(int n){
+    if (n==0||n==1){
+        return n;
+    }
+    else{
+        return n*fact_num(n-1);
+    }
+}
+int main() {
+    // Write C code here
+    int arr[10];
+    int n=10;
+    for (int i=0;i<n;i++){
+        arr[i]=fact_num(i);
+        printf("%d",arr[i]);
+        /*or use printf("%d",fact_num(i));*/
     }
 
     return 0;
