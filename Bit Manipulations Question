@@ -1,1 +1,54 @@
+1. Check if ith bit is set or not:
+bool check_bit(int N,int i){
+ if (N&(1<<i)){
+   return true;
+   }
+else {
+    return false;
+  }
+}
 
+2.Set the ith bit:
+N=N&(1<<i);
+
+3. Toggle the ith bit:
+N=N^(1<<i);
+
+4.Clear the ith bit:
+N=N&~(1<<i);
+or using 
+N=N&^(1<<i);
+
+5.Last set bit:
+N&(N-1);
+
+6.power of 2 :
+A number is power of 2 if the binary representation has only one 1 .: method 1: N&N-1 and method 2: N&((1<<k)-1)
+(implies only one set bit)
+if (N&N-1==0){
+   printf("Yes it is the Power of 2 ");
+    }
+else{
+  printf("No it is not power of 2");
+}
+
+7.To Divide a Number by 2 without using the divsion operator: right shift operator
+x=x>>1;
+
+8.To Multiply a number by 2 without using the multiplication operator: left shift operator:
+x=x<<1;
+
+9.Swapping 2 numbers without using third variable:
+a=a^b;
+b=a^b;
+a=a^b;
+
+10.Count number of set bits in number n:
+int cnt;
+while(n>0){
+if (n%2==1){
+cnt=cnt+1;
+n=n>>1;
+}
+printf("%d",cnt);
+}
