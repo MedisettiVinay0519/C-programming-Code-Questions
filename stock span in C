@@ -1,0 +1,32 @@
+Brute Force Approach:
+void calculatespan(int prices[],int n,int *spans){
+    for(int i=0;i<n;i++){
+       int span=1;
+       int j=i-1;
+       while(j>=0 && prices[j]<=prices[i]){
+       span=span+1;
+       j=j-1;
+       }
+       spans[i]=span;
+    }
+}
+
+Optimal Solution : Using the Concept of Monotonic Stack:(Similar to previous Greater Element)
+void caluclatespan(int prices[],int n , int spans[]){
+int stack[n];
+int top=-1
+for (int i=0;i<n;i++){
+  int span[i]=0;
+  while(top!=-1 && prices[top]<=prices[i]){
+     top=top-1;
+  }
+  if (top==-1){
+    span[i]=i+1;
+  }
+  elseif(top!=-1){
+  span[i]=i-stack[top];
+  }
+  top=top+1
+  stack[top]=i;
+  }
+}
