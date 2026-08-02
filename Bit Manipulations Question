@@ -52,6 +52,14 @@ n=n>>1;
 }
 
 printf("%d",cnt);
+or other approach
+int cnt;
+ while(n>0){
+n=n&n-1;c
+cnt++;
+ }
+printf("%d",)
+
 
 11.Minimum bits flips to convert a Number(N) to other Number(M) : idea: check at each bit the number of places where the bits are opposite to each which means is 
 opposite bits leads to high and same bits leads to low => XOR operation
