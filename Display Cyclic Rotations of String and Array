@@ -14,7 +14,32 @@ for(i=0;i<n;<i++){
   for(j=0;j<n;j++){
     printf("%c",a[(i+j)%n]);
   }
+printf("\n");
 }
 return 0;
 }
 
+Display all the cyclic Combinations of a given array of integers: Current index = (starting index + offset) % length
+#include<stdio.h>
+#include<string.h>
+int main(){
+int i , j , n,*A;
+printf("Enter the size of the array");
+scanf("%d",&n);
+A=(int*)(malloc(sizeof(int)));
+printf("Enter the numbers:");
+for (i=0;i<n;i++){
+  scanf("%d",A+i);
+}
+printf("The Entered Numbers are:")
+for(i=0;i<n;i++){
+    printf("%d",A[i]);
+}
+printf("The Cyclic rotations of the array of integers:");
+for(i=0;i<n;i++){
+  for(int j=0;j<n;j++){
+      printf("%d",A[(i+j)%n]);
+    }
+      printf("\n");
+  }
+}
