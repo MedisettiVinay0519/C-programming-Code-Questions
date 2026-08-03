@@ -1,1 +1,20 @@
+Display all the cyclic Combinations of a given string: Current index = (starting index + offset) % length
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+int main(){
+char a[80];
+int i,j,n;
+printf("enter the string");
+gets(a);
+n=strlen(a);
+for(i=0;i<n;<i++){
+  for(j=0;j<n;j++){
+    printf("%c",a[(i+j)%n]);
+  }
+}
+return 0;
+}
 
