@@ -1,1 +1,19 @@
-1.Finding the moving average of the sensor values .
+1.Finding the moving average of the sensor values of fixed window size k:
+int sum=0;
+int avg=0;
+int l=0;
+int r=k;
+/*First window sum*/
+for(int i=l;i<r:i++){
+  sum=sum+arr[i];
+}
+avg=sum/k;
+printf("%d",avg);
+while(r<n){
+  sum=sum+arr[r]-arr[l];
+  avg=sum/k;
+  printf("%d",avg);
+  r=r+1;
+  l=l-1;
+}
+
